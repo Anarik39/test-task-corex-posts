@@ -1,7 +1,7 @@
-import { store } from 'quasar/wrappers'
-import { createStore } from 'vuex'
-
-// import example from './module-example'
+import {store} from 'quasar/wrappers'
+import {createStore} from 'vuex'
+import axios from 'axios';
+import posts from './module-posts'
 
 /*
  * If not building with SSR mode, you can
@@ -12,10 +12,23 @@ import { createStore } from 'vuex'
  * with the Store instance.
  */
 
+const API_URL = process.env.API;
+
 export default store(function (/* { ssrContext } */) {
   const Store = createStore({
+    actions: {
+      get({state}, method) {
+        return axios
+          .get(`${API_URL}/typicode/demo/${method}`)
+          .then((response) => response.data)
+      },
+      post({state}, options) {
+        return axios.post(`${API_URL}/typicode/demo/${options.method}`, options.params)
+          .then((response) => response?.data)
+      },
+    },
     modules: {
-      // example
+      posts
     },
 
     // enable strict mode (adds overhead!)
