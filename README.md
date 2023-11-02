@@ -1,26 +1,23 @@
-# Quasar App (corex-test)
+# Test task Corex
 
-A Quasar Framework app
+## Get posts with API my-json-server.typicode
 
-## Install the dependencies
-```bash
+Stack: Vue 2, Vuex, Quasar
+
+### Install
+
+```sh
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
+### Compile and Hot-Reload for Development
+
+```sh
+npm run serve
 ```
 
-### Lint the files
-```bash
-npm run lint
-```
+### Type-Check, Compile and Minify for Production
 
-### Build the app for production
-```bash
-quasar build
+```sh
+npm run build
 ```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
