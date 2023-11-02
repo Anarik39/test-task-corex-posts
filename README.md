@@ -1,6 +1,6 @@
 # Test task Corex
 
-## Get posts with API my-json-server.typicode
+## Posts with API my-json-server.typicode
 
 Stack: Vue 2, Vuex, Quasar
 
